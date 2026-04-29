@@ -13,6 +13,16 @@
   gtag('config', 'G-9G98PS69MD');
 </script>
 
+<!-- Smartlook -->
+<script type='text/javascript'>
+  window.smartlook||(function(d) {
+    var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
+    var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
+    c.charset='utf-8';c.src='https://web-sdk.smartlook.com/recorder.js';h.appendChild(c);
+    })(document);
+    smartlook('init', '1eeb6b10824f646ffbe0b0e9b32afa27939c6828', { region: 'eu' });
+</script>
+
 <title>Cakewalk Restore · 24/7 Water Damage Restoration in Toronto</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -120,6 +130,10 @@ h1.hero-h .accent { color:var(--red); font-weight:800; }
 .hff-row { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
 .hff-submit { width:100%; padding:16px; background:var(--red); color:white; font-size:15px; font-weight:700; letter-spacing:0.02em; transition:background 0.15s; margin-top:4px; }
 .hff-submit:hover { background:var(--red-2); }
+.hff-consent { display:flex; gap:10px; align-items:flex-start; padding:10px 0 4px; font-size:12px; color:#475569; line-height:1.45; }
+.hff-consent input { margin-top:2px; width:16px; height:16px; flex-shrink:0; accent-color:var(--red); }
+.hff-consent.err { color:var(--red); }
+.hff-consent.err input { outline:2px solid var(--red); }
 
 /* ─── TRUST BADGES ─── */
 .trust-band { background:var(--paper); padding:48px 0; color:var(--ink); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
@@ -1215,6 +1229,7 @@ footer { background:var(--ink); padding:72px 0 28px; color:white; }
           <div class="hff-field"><label>Phone</label><input type="tel" placeholder="(416) 000 0000"></div>
           <div class="hff-field"><label>Address</label><input type="text" placeholder="123 King St W, Toronto"></div>
           <div class="hff-field"><label>Message</label><textarea placeholder="Briefly describe the situation"></textarea></div>
+          <label class="hff-consent"><input type="checkbox" class="cwr-consent" id="cwrConsent1"><span>I agree to be contacted by SMS/text message at the phone number provided. Message and data rates may apply. Reply STOP to opt out.</span></label>
           <button class="hff-submit" onclick="hf(this)">Request Callback</button>
         </div>
       </div>
@@ -1923,6 +1938,7 @@ footer { background:var(--ink); padding:72px 0 28px; color:white; }
           <div class="hff-field"><label>Phone</label><input type="tel" placeholder="(416) 000 0000"></div>
           <div class="hff-field"><label>Address</label><input type="text" placeholder="123 King St W, Toronto"></div>
           <div class="hff-field"><label>Message</label><textarea placeholder="Briefly describe the situation"></textarea></div>
+          <label class="hff-consent"><input type="checkbox" class="cwr-consent" id="cwrConsent2"><span>I agree to be contacted by SMS/text message at the phone number provided. Message and data rates may apply. Reply STOP to opt out.</span></label>
           <button class="hff-submit" onclick="hf(this)">Request Free Estimate</button>
         </div>
       </div>
@@ -2144,6 +2160,14 @@ function hf(btn) {
   var address = fields['address'] || '';
   var message = fields['message'] || '';
   if (!name || !phone) { alert('Please fill out name and phone.'); return; }
+  var consent = wrap.querySelector('.cwr-consent');
+  if (!consent || !consent.checked) {
+    alert('Please confirm SMS consent to continue.');
+    if (consent) consent.closest('.hff-consent').classList.add('err');
+    return;
+  }
+  var consentText = (consent.closest('.hff-consent').querySelector('span')?.textContent || '').trim();
+  var consentTimestamp = new Date().toISOString();
   var originalLabel = btn.textContent;
   btn.disabled = true;
   btn.textContent = 'Sending...';
@@ -2160,7 +2184,10 @@ function hf(btn) {
     utmSource: p.get('utm_source') || '',
     utmMedium: p.get('utm_medium') || '',
     utmCampaign: p.get('utm_campaign') || '',
-    referrerUrl: document.referrer || ''
+    referrerUrl: document.referrer || '',
+    smsOptIn: true,
+    smsOptInText: consentText,
+    smsOptInTimestamp: consentTimestamp
   };
   fetch(CWR_API_BASE + '/api/bookings', {
     method: 'POST',
