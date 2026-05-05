@@ -1181,6 +1181,7 @@ footer { background:var(--ink); padding:72px 0 28px; color:white; }
     <ul>
       <li><a id="nl-home" class="active" onclick="return gp('home')">Home</a></li>
       <li><a id="nl-services" onclick="return gp('services')">Water Damage Services</a></li>
+      <li><a id="nl-crimescene" onclick="return gp('crimescene')">Crime Scene Cleanup</a></li>
       <li><a id="nl-about" onclick="return gp('about')">About Us</a></li>
       <li><a id="nl-contact" onclick="return gp('contact')">Contact</a></li>
     </ul>
@@ -1205,8 +1206,8 @@ footer { background:var(--ink); padding:72px 0 28px; color:white; }
     </div>
     <div class="hero-grid">
       <div>
-        <h1 class="hero-h">24/7 Water Damage<br>Restoration<br><span class="accent">in Toronto.</span></h1>
-        <p class="hero-lead">Fast response day or night. Free evaluations. We work with all insurance companies. On-site in 60 minutes or less across Toronto and the GTA.</p>
+        <h1 class="hero-h">When water hits,<br><span class="accent">we move first.</span></h1>
+        <p class="hero-lead">Toronto's 24/7 water-damage and biohazard restoration crew. On-site within 60 minutes, fully insured, IICRC certified, and direct-billed to your insurer.</p>
         <div class="hero-ctas">
           <a href="tel:+16474934887" class="btn-primary">
             <svg viewBox="0 0 24 24"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/></svg>
@@ -1218,18 +1219,17 @@ footer { background:var(--ink); padding:72px 0 28px; color:white; }
       <div class="hero-form" id="heroForm">
         <div class="hero-form-banner">
           <div class="hero-form-banner-dot"></div>
-          Schedule An Appointment 24/7
+          24/7 Emergency Dispatch &middot; 5-Min Response
         </div>
         <div class="hero-form-head">
-          <h3>Request a callback now.</h3>
-          <p><strong style="color:var(--red)">We respond within 5 minutes.</strong> For immediate 24/7 assistance, call (647) 493-4887.</p>
+          <h3>Get help in 5 minutes.</h3>
+          <p>Drop your details &mdash; a live restoration tech will call back. <strong style="color:var(--red)">No bots, no queue.</strong> Or call (647) 493-4887 24/7.</p>
         </div>
-        <div class="hff">
+        <div class="hff" data-source-page="home">
           <div class="hff-field"><label>Name</label><input type="text" placeholder="Jane Smith"></div>
           <div class="hff-field"><label>Phone</label><input type="tel" placeholder="(416) 000 0000"></div>
           <div class="hff-field"><label>Address</label><input type="text" placeholder="123 King St W, Toronto"></div>
           <div class="hff-field"><label>Message</label><textarea placeholder="Briefly describe the situation"></textarea></div>
-          <label class="hff-consent"><input type="checkbox" class="cwr-consent" id="cwrConsent1"><span>I agree to be contacted by SMS/text message at the phone number provided. Message and data rates may apply. Reply STOP to opt out.</span></label>
           <button class="hff-submit" onclick="hf(this)">Request Callback</button>
         </div>
       </div>
@@ -1711,6 +1711,17 @@ footer { background:var(--ink); padding:72px 0 28px; color:white; }
           <span class="svc-learn">Learn more <span class="svc-learn-arrow"><svg viewBox="0 0 24 24"><path d="M10 17l5-5-5-5v10z"/></svg></span></span>
         </div>
       </a>
+      <a class="svc" onclick="gp('services')">
+        <div class="svc-img-wrap">
+          <span class="svc-num"><span class="dot">●</span> 07 / Mold</span>
+          <img class="svc-img" src="assets/team-smiling.jpeg" alt="Mold remediation">
+        </div>
+        <div class="svc-body">
+          <h3>Mold Remediation</h3>
+          <p>Certified containment, HEPA filtration, and antimicrobial treatment to safely remove mold colonies and restore healthy indoor air. Post-remediation clearance testing on every job.</p>
+          <span class="svc-learn">Learn more <span class="svc-learn-arrow"><svg viewBox="0 0 24 24"><path d="M10 17l5-5-5-5v10z"/></svg></span></span>
+        </div>
+      </a>
     </div></div><div class="carousel-hint" style="color:rgba(255,255,255,0.55)">
       <span>Swipe to see more</span>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
@@ -1933,12 +1944,11 @@ footer { background:var(--ink); padding:72px 0 28px; color:white; }
           <h3>Request a free estimate.</h3>
           <p><strong style="color:var(--red)">We respond within 5 minutes.</strong> A certified specialist will call you back.</p>
         </div>
-        <div class="hff">
+        <div class="hff" data-source-page="services">
           <div class="hff-field"><label>Name</label><input type="text" placeholder="Jane Smith"></div>
           <div class="hff-field"><label>Phone</label><input type="tel" placeholder="(416) 000 0000"></div>
           <div class="hff-field"><label>Address</label><input type="text" placeholder="123 King St W, Toronto"></div>
           <div class="hff-field"><label>Message</label><textarea placeholder="Briefly describe the situation"></textarea></div>
-          <label class="hff-consent"><input type="checkbox" class="cwr-consent" id="cwrConsent2"><span>I agree to be contacted by SMS/text message at the phone number provided. Message and data rates may apply. Reply STOP to opt out.</span></label>
           <button class="hff-submit" onclick="hf(this)">Request Free Estimate</button>
         </div>
       </div>
@@ -1966,7 +1976,7 @@ footer { background:var(--ink); padding:72px 0 28px; color:white; }
 
 <!-- ═══ ABOUT ═══ -->
 <div id="p-about" class="page">
-  <div class="ph"><div class="ph-w"><span class="kicker">About Us</span><h1>Toronto's trusted<br>water damage <span class="accent">restoration team.</span></h1><p>Built on a foundation of experience, dedication, and a deep commitment to serving our community.</p></div></div>
+  <div class="ph"><div class="ph-w"><span class="kicker">About Us</span><h1>Toronto's trusted<br>full-service <span class="accent">restoration team.</span></h1><p>Cakewalk Restore was built by Toronto restoration veterans who were tired of slow callbacks and surprise invoices. We answer in five minutes, arrive in under an hour, and never quote a job we can't honour. Water, fire, mould, biohazard, and crime-scene cleanup &mdash; one number, one team, 24/7.</p></div></div>
   <section class="sec"><div class="w"><div class="practice-grid"><div class="practice-photo practice-photo-styled"><div class="practice-photo-frame"><img src="assets/team-smiling.jpeg" alt="The Cakewalk Restore team"><div class="practice-photo-badge"><div class="pp-badge-top"><div class="pp-badge-dot"></div><span>TORONTO BORN</span></div><div class="pp-badge-num">100<span>%</span></div><div class="pp-badge-lbl">Locally owned &amp; operated</div></div><div class="practice-photo-sig"><svg viewBox="0 0 28 28" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2 L14 26 M2 14 L26 14 M6 6 L22 22 M22 6 L6 22"/></svg><span>Cakewalk<br>Restore</span></div></div></div><div class="practice-content"><span class="kicker">Our Story</span><h2 style="margin-top:20px">Built on <span class="accent">experience</span> and trust.</h2><p>Cakewalk Restore was built on a foundation of experience, dedication, and a deep commitment to serving our community. Our team brings over 30 years of combined experience in the restoration industry, building a strong partnership based on trust, expertise, and a shared passion for helping our GTA neighbours when they need it most.</p><p>We specialize in water damage restoration for homes and businesses across Toronto and the GTA. Our expert team is available 24/7 with a fast 60 minute on-site response time. We offer free estimates and inspections to quickly assess your situation, and we provide guidance through the claim filing process to ensure a seamless experience with your insurance.</p></div></div></div></section>
   
 <!-- STATS BAR -->
@@ -2051,13 +2061,29 @@ footer { background:var(--ink); padding:72px 0 28px; color:white; }
 <div id="p-services" class="page">
   <div class="ph"><div class="ph-w"><span class="kicker">Water Damage Restoration</span><h1>Emergency Water Damage<br>Services in <span class="accent">Toronto.</span></h1><p>Water damage is a serious issue that can significantly impact the integrity of your property. We offer 24/7 emergency water damage restoration services across Toronto and the GTA, with certified professionals ready to respond.</p></div></div>
   <section class="sec"><div class="w"><div class="svc-grid"><div class="svc"><div class="svc-img-wrap"><img class="svc-img" src="assets/team-notes.jpeg" alt="Water extraction"></div><div class="svc-body"><h3>Water Extraction</h3><p>Truck-mounted extractors remove thousands of gallons per hour, stopping damage before it spreads.</p></div></div><div class="svc"><div class="svc-img-wrap"><img class="svc-img" src="assets/team-portrait.jpeg" alt="Water mitigation"></div><div class="svc-body"><h3>Water Mitigation</h3><p>Complete water damage mitigation including extraction, drying, sanitizing, and restoration.</p></div></div><div class="svc"><div class="svc-img-wrap"><img class="svc-img" src="assets/team-thumbs.jpeg" alt="Sewage cleanup"></div><div class="svc-body"><h3>Sewage Cleanup</h3><p>Category 3 black water cleanup with full biohazard protocols and hospital-grade disinfection.</p></div></div><div class="svc"><div class="svc-img-wrap"><img class="svc-img" src="assets/team-walk.jpeg" alt="Flood damage"></div><div class="svc-body"><h3>Flood Damage Restoration</h3><p>Emergency flood response across the GTA with rapid water removal and property restoration.</p></div></div><div class="svc"><div class="svc-img-wrap"><img class="svc-img" src="assets/team-skyline.jpeg" alt="Thermal imaging"></div><div class="svc-body"><h3>Thermal Imaging Inspection</h3><p>Infrared inspection locates hidden moisture behind walls, under floors, and above ceilings.</p></div></div><div class="svc"><div class="svc-img-wrap"><img class="svc-img" src="assets/team-duo.jpeg" alt="Structural drying"></div><div class="svc-body"><h3>Structural Drying &amp; Dehumidification</h3><p>High-capacity fans and dehumidifiers with IICRC S500 protocol drying on every job.</p></div></div></div></div></section>
-  <section class="cta-sec"><div class="cta-w"><div><h2>Get emergency help now.</h2><p class="cta-sub">Available 24/7 for all water damage emergencies across Toronto and the GTA.</p></div><div class="cta-r"><a href="tel:+16474934887" class="cta-phone"><svg viewBox="0 0 24 24"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/></svg>(647) 493-4887</a></div></div></section>
+  <section class="cta-sec"><div class="cta-w"><div><h2>Get emergency help now.</h2><p class="cta-sub">Burst pipe? Sewage backup? Crime-scene cleanup? One number, 24/7 across Toronto and the GTA.</p></div><div class="cta-r"><a href="tel:+16474934887" class="cta-phone"><svg viewBox="0 0 24 24"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/></svg>(647) 493-4887</a></div></div></section>
+</div>
+
+<!-- ═══ CRIME SCENE ═══ -->
+<div id="p-crimescene" class="page">
+  <div class="ph"><div class="ph-w"><span class="kicker">24/7 Biohazard Response</span><h1>Discreet, certified<br>crime &amp; trauma <span class="accent">scene cleanup.</span></h1><p>Unmarked vehicles. IICRC-trained bio-recovery technicians. Health Canada compliant disposal. We work directly with law enforcement, coroners, landlords, and your insurer &mdash; so your family or staff never has to see what happened.</p></div></div>
+  <section class="sec"><div class="w"><div class="practice-grid"><div><span class="kicker">Confidential intake</span><h2 style="font-family:var(--display);font-size:clamp(36px,4.5vw,56px);font-weight:700;letter-spacing:-0.035em;line-height:1;color:var(--ink);margin-top:20px;margin-bottom:24px">We respond in <span style="color:var(--red);font-weight:800">5 minutes.</span></h2><p style="font-size:16px;color:var(--grey-1);max-width:520px">Toronto &amp; GTA &middot; 60-minute on-site &middot; Direct insurance billing. For immediate dispatch from a private line, call <strong>(647) 493-4887</strong>.</p><div style="margin-top:28px;display:flex;flex-direction:column;gap:14px;border-top:2px solid var(--ink);padding-top:24px"><div style="display:flex;gap:12px;align-items:flex-start"><strong style="color:var(--red);font-weight:800;min-width:24px">01</strong><div><strong style="display:block;color:var(--ink)">Discreet arrival</strong><span style="color:var(--grey-1);font-size:14px">Unmarked vehicles, plain-clothes coordination, no signage.</span></div></div><div style="display:flex;gap:12px;align-items:flex-start"><strong style="color:var(--red);font-weight:800;min-width:24px">02</strong><div><strong style="display:block;color:var(--ink)">Containment &amp; PPE</strong><span style="color:var(--grey-1);font-size:14px">Full PPE, negative-air containment, biohazard chain-of-custody.</span></div></div><div style="display:flex;gap:12px;align-items:flex-start"><strong style="color:var(--red);font-weight:800;min-width:24px">03</strong><div><strong style="display:block;color:var(--ink)">Bio-cleaning &amp; disinfection</strong><span style="color:var(--grey-1);font-size:14px">Hospital-grade disinfectants, ATP testing, structural deodorization.</span></div></div><div style="display:flex;gap:12px;align-items:flex-start"><strong style="color:var(--red);font-weight:800;min-width:24px">04</strong><div><strong style="display:block;color:var(--ink)">Disposal under O. Reg. 347</strong><span style="color:var(--grey-1);font-size:14px">Manifest-tracked medical-waste disposal, full documentation for adjusters.</span></div></div></div></div><div class="hero-form" id="crimeSceneForm"><div class="hero-form-banner"><div class="hero-form-banner-dot"></div>Confidential 24/7 Response</div><div class="hero-form-head"><h3>Request discreet help.</h3><p><strong style="color:var(--red)">A senior tech will call from a private line within 5 minutes.</strong> All inquiries are confidential.</p></div><div class="hff" data-source-page="crimescene"><div class="hff-field"><label>Name</label><input type="text" placeholder="Jane Smith"></div><div class="hff-field"><label>Phone</label><input type="tel" placeholder="(416) 000 0000"></div><div class="hff-field"><label>Address</label><input type="text" placeholder="Property address"></div><div class="hff-field"><label>Situation</label><select class="cwr-situation" style="width:100%;padding:12px 14px;border:1px solid #d4d4d4;border-radius:4px;font-size:15px;background:white;color:var(--ink);font-family:inherit"><option value="">Select situation type&hellip;</option><option>Unattended death / decomposition</option><option>Homicide / crime scene</option><option>Suicide</option><option>Industrial / vehicle accident</option><option>Hoarding / gross filth</option><option>Other biohazard</option></select></div><div class="hff-field"><label>Message</label><textarea style="height:90px" placeholder="Anything else we should know"></textarea></div><button class="hff-submit" onclick="hf(this)">Request Confidential Callback</button></div></div></div></div></section>
+
+  <section class="sec sec-paper"><div class="w"><div class="sec-header"><div class="sec-header-l"><span class="kicker sec-header-kicker">What we handle</span><h2 class="sec-header-ttl">Six situation types,<br><span class="accent">one trained team.</span></h2></div><div class="sec-header-r">Every job is handled by IICRC-ATR certified technicians under full PPE, with manifest-tracked medical-waste disposal.</div></div><div class="values-grid"><div class="val"><div class="val-n">01</div><h3>Unattended death</h3><p>Decomposition, odor, fluids &mdash; full bio-recovery and structural deodorization.</p></div><div class="val"><div class="val-n">02</div><h3>Homicide &amp; crime scene</h3><p>Discreet, compassionate cleanup once police release the scene. Coordinated with investigators.</p></div><div class="val"><div class="val-n">03</div><h3>Suicide</h3><p>Sensitive response handled with privacy and care for the family. Insurance-billed.</p></div><div class="val"><div class="val-n">04</div><h3>Industrial / vehicle accident</h3><p>Blood, OPIM, sharps. Compliant with O. Reg. 347 medical-waste disposal.</p></div><div class="val"><div class="val-n">05</div><h3>Hoarding / gross filth</h3><p>Multi-day, judgement-free cleanouts. Pest, mould, and biohazard remediation.</p></div><div class="val"><div class="val-n">06</div><h3>Other biohazard</h3><p>Blood-borne pathogens, sewage cross-contamination, infectious-disease decontamination.</p></div></div></div></section>
+
+  <section class="sec about-certs"><div class="w"><div class="certs-head"><span class="kicker">Compliance &amp; Certifications</span><h2>Certified. Insured. <span class="accent">Compliant.</span></h2></div><div class="certs-grid"><div class="cert"><div class="cert-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><polygon points="12,2 22,8 22,16 12,22 2,16 2,8"/><polyline points="8,12 11,15 16,10"/></svg></div><strong>IICRC ATR Certified</strong><span>Applied Trauma &amp; Crime Scene Recovery</span></div><div class="cert"><div class="cert-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M3 9 H21"/></svg></div><strong>WSIB Covered</strong><span>Full workplace safety clearance</span></div><div class="cert"><div class="cert-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2 L4 6 L4 13 C4 17.5 7.5 20.5 12 22 C16.5 20.5 20 17.5 20 13 L20 6 Z"/><polyline points="9,12 11,14 15,10"/></svg></div><strong>ABRA Member</strong><span>American Bio-Recovery Association</span></div><div class="cert"><div class="cert-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7 V12 L15 14"/></svg></div><strong>Health Canada Compliant</strong><span>O. Reg. 347 disposal, full manifest</span></div></div></div></section>
+
+  <section class="sec"><div class="w"><div class="sec-header"><div class="sec-header-l"><span class="kicker sec-header-kicker">Insurance &amp; billing</span><h2 class="sec-header-ttl">Most policies cover<br><span class="accent">trauma cleanup.</span></h2></div><div class="sec-header-r">Most homeowner and commercial policies in Ontario cover crime-scene and trauma cleanup. We direct-bill all major Canadian insurers and provide adjuster-ready documentation on every job.</div></div></div></section>
+
+  <section class="sec sec-paper"><div class="w"><span class="kicker">Frequently asked</span><h2 style="font-family:var(--display);font-size:clamp(36px,4.5vw,56px);font-weight:700;letter-spacing:-0.035em;line-height:1;color:var(--ink);margin-top:16px;margin-bottom:32px">Questions families <span style="color:var(--red);font-weight:800">often ask.</span></h2><div class="faq-it"><button class="faq-q" onclick="fq(this)">How fast can you arrive?</button><div class="faq-a"><p>Our average on-site arrival across Toronto and the GTA is under 60 minutes, 24/7/365. The senior tech will call you back from a private line within 5 minutes of submitting this form.</p></div></div><div class="faq-it"><button class="faq-q" onclick="fq(this)">Will neighbours know what happened?</button><div class="faq-a"><p>No. We dispatch unmarked vehicles, our technicians wear plain coveralls outside the containment area, and we coordinate scheduling with the family for maximum discretion.</p></div></div><div class="faq-it"><button class="faq-q" onclick="fq(this)">Does insurance pay for this?</button><div class="faq-a"><p>In most cases, yes. Most homeowner and commercial property policies in Ontario cover trauma and biohazard cleanup. We direct-bill the insurer and walk the claim through with the adjuster.</p></div></div><div class="faq-it"><button class="faq-q" onclick="fq(this)">Do you work with police and coroners?</button><div class="faq-a"><p>Yes. We coordinate directly with law enforcement, coroners, landlords, and property managers. We do not enter the scene until investigators release it, and we provide chain-of-custody documentation for any biohazard material removed.</p></div></div></div></section>
+
+  <section class="cta-sec"><div class="cta-w"><div><h2>Need help right now?</h2><p class="cta-sub">Call (647) 493-4887 &mdash; answered 24/7/365 by a live restoration tech, on a private line.</p></div><div class="cta-r"><a href="tel:+16474934887" class="cta-phone"><svg viewBox="0 0 24 24"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/></svg>(647) 493-4887</a><span class="cta-avail">Confidential &middot; 24/7/365</span></div></div></section>
 </div>
 
 <!-- ═══ CONTACT ═══ -->
 <div id="p-contact" class="page">
   <div class="ph"><div class="ph-w"><span class="kicker">Contact Us</span><h1>Get a <span class="accent">free estimate</span> today.</h1><p>For immediate 24/7 assistance, call (647) 493-4887. For non-emergency inquiries, fill out the form below to request a callback.</p></div></div>
-  <section class="sec"><div class="w"><div class="practice-grid"><div><span class="kicker">Contact Information</span><h2 style="font-family:var(--display);font-size:clamp(36px,4.5vw,56px);font-weight:700;letter-spacing:-0.035em;line-height:1;color:var(--ink);margin-top:20px;margin-bottom:24px">Reach us <span style="color:var(--red);font-weight:800">24/7.</span></h2><div style="display:flex;flex-direction:column;gap:20px;border-top:2px solid var(--ink);padding-top:24px"><div style="display:flex;gap:16px;align-items:flex-start"><div style="width:44px;height:44px;background:var(--red);color:white;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg viewBox="0 0 24 24" width="18" height="18" fill="white"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/></svg></div><div><strong style="display:block;font-family:var(--display);font-size:18px;font-weight:700;color:var(--ink);margin-bottom:4px">Phone</strong><span style="font-size:15px;color:var(--grey-1)">(647) 493-4887 &middot; Available 24/7</span></div></div><div style="display:flex;gap:16px;align-items:flex-start"><div style="width:44px;height:44px;background:var(--red);color:white;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg viewBox="0 0 24 24" width="18" height="18" fill="white"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div><div><strong style="display:block;font-family:var(--display);font-size:18px;font-weight:700;color:var(--ink);margin-bottom:4px">Email</strong><span style="font-size:15px;color:var(--grey-1)">emergency@cakewalkcleaning.com</span></div></div><div style="display:flex;gap:16px;align-items:flex-start"><div style="width:44px;height:44px;background:var(--red);color:white;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg viewBox="0 0 24 24" width="18" height="18" fill="white"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div><div><strong style="display:block;font-family:var(--display);font-size:18px;font-weight:700;color:var(--ink);margin-bottom:4px">Service Area</strong><span style="font-size:15px;color:var(--grey-1)">Toronto &amp; the Greater Toronto Area</span></div></div><div style="display:flex;gap:16px;align-items:flex-start"><div style="width:44px;height:44px;background:var(--red);color:white;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg viewBox="0 0 24 24" width="18" height="18" fill="white"><circle cx="12" cy="12" r="10"/><polyline points="12,7 12,12 16,14" stroke="var(--red)" stroke-width="2" fill="none"/></svg></div><div><strong style="display:block;font-family:var(--display);font-size:18px;font-weight:700;color:var(--ink);margin-bottom:4px">Working Hours</strong><span style="font-size:15px;color:var(--grey-1)">Available 24/7/365</span></div></div></div></div><div class="hero-form" id="contactForm"><div class="hero-form-banner"><div class="hero-form-banner-dot"></div>Schedule An Appointment 24/7</div><div class="hero-form-head"><h3>Request a callback.</h3><p><strong style="color:var(--red)">We respond within 5 minutes.</strong> For immediate 24/7 assistance, call (647) 493-4887.</p></div><div class="hff"><div class="hff-field"><label>Name</label><input type="text" placeholder="Jane Smith"></div><div class="hff-field"><label>Phone</label><input type="tel" placeholder="(416) 000 0000"></div><div class="hff-field"><label>Email</label><input type="email" placeholder="jane@example.com"></div><div class="hff-field"><label>Address</label><input type="text" placeholder="123 King St W, Toronto"></div><div class="hff-field"><label>Message</label><textarea style="height:90px" placeholder="Briefly describe your situation"></textarea></div><label class="hff-consent" style="display:flex;gap:8px;align-items:flex-start;font-size:13px;color:var(--grey-1);margin:8px 0"><input type="checkbox" class="cwr-consent" id="cwrConsent3"><span>I agree to be contacted by SMS/text message at the phone number provided. Message and data rates may apply. Reply STOP to opt out.</span></label><button class="hff-submit" onclick="hf(this)">Send Message</button></div></div></div></div></section>
+  <section class="sec"><div class="w"><div class="practice-grid"><div><span class="kicker">Contact Information</span><h2 style="font-family:var(--display);font-size:clamp(36px,4.5vw,56px);font-weight:700;letter-spacing:-0.035em;line-height:1;color:var(--ink);margin-top:20px;margin-bottom:24px">Reach us <span style="color:var(--red);font-weight:800">24/7.</span></h2><div style="display:flex;flex-direction:column;gap:20px;border-top:2px solid var(--ink);padding-top:24px"><div style="display:flex;gap:16px;align-items:flex-start"><div style="width:44px;height:44px;background:var(--red);color:white;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg viewBox="0 0 24 24" width="18" height="18" fill="white"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/></svg></div><div><strong style="display:block;font-family:var(--display);font-size:18px;font-weight:700;color:var(--ink);margin-bottom:4px">Phone</strong><span style="font-size:15px;color:var(--grey-1)">(647) 493-4887 &middot; Available 24/7</span></div></div><div style="display:flex;gap:16px;align-items:flex-start"><div style="width:44px;height:44px;background:var(--red);color:white;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg viewBox="0 0 24 24" width="18" height="18" fill="white"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div><div><strong style="display:block;font-family:var(--display);font-size:18px;font-weight:700;color:var(--ink);margin-bottom:4px">Email</strong><span style="font-size:15px;color:var(--grey-1)">emergency@cakewalkcleaning.com</span></div></div><div style="display:flex;gap:16px;align-items:flex-start"><div style="width:44px;height:44px;background:var(--red);color:white;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg viewBox="0 0 24 24" width="18" height="18" fill="white"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div><div><strong style="display:block;font-family:var(--display);font-size:18px;font-weight:700;color:var(--ink);margin-bottom:4px">Service Area</strong><span style="font-size:15px;color:var(--grey-1)">Toronto &amp; the Greater Toronto Area</span></div></div><div style="display:flex;gap:16px;align-items:flex-start"><div style="width:44px;height:44px;background:var(--red);color:white;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg viewBox="0 0 24 24" width="18" height="18" fill="white"><circle cx="12" cy="12" r="10"/><polyline points="12,7 12,12 16,14" stroke="var(--red)" stroke-width="2" fill="none"/></svg></div><div><strong style="display:block;font-family:var(--display);font-size:18px;font-weight:700;color:var(--ink);margin-bottom:4px">Working Hours</strong><span style="font-size:15px;color:var(--grey-1)">Available 24/7/365</span></div></div></div></div><div class="hero-form" id="contactForm"><div class="hero-form-banner"><div class="hero-form-banner-dot"></div>Schedule An Appointment 24/7</div><div class="hero-form-head"><h3>Request a callback.</h3><p><strong style="color:var(--red)">We respond within 5 minutes.</strong> For immediate 24/7 assistance, call (647) 493-4887.</p></div><div class="hff" data-source-page="contact"><div class="hff-field"><label>Name</label><input type="text" placeholder="Jane Smith"></div><div class="hff-field"><label>Phone</label><input type="tel" placeholder="(416) 000 0000"></div><div class="hff-field"><label>Email</label><input type="email" placeholder="jane@example.com"></div><div class="hff-field"><label>Address</label><input type="text" placeholder="123 King St W, Toronto"></div><div class="hff-field"><label>Message</label><textarea style="height:90px" placeholder="Briefly describe your situation"></textarea></div><button class="hff-submit" onclick="hf(this)">Send Message</button></div></div></div></div></section>
 </div>
 
 <!-- FOOTER -->
@@ -2068,11 +2094,11 @@ footer { background:var(--ink); padding:72px 0 28px; color:white; }
       <p>24/7 water damage restoration across Toronto and the Greater Toronto Area. Free estimates, claim filing guidance, and a 60 minute response guarantee.</p>
       <a href="tel:+16474934887" class="fb-tel"><svg viewBox="0 0 24 24"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/></svg>(647) 493-4887</a>
     </div>
-    <div class="fc"><h5>Services</h5><ul><li><a onclick="gp('services')">Water Damage Restoration</a></li><li><a onclick="gp('services')">Water Extraction</a></li><li><a onclick="gp('services')">Water Mitigation</a></li><li><a onclick="gp('services')">Sewage Cleanup</a></li><li><a onclick="gp('services')">Flood Damage Restoration</a></li><li><a onclick="gp('services')">Thermal Imaging</a></li><li><a onclick="gp('services')">Structural Drying</a></li></ul></div>
+    <div class="fc"><h5>Services</h5><ul><li><a onclick="gp('services')">Water Damage Restoration</a></li><li><a onclick="gp('services')">Water Extraction</a></li><li><a onclick="gp('services')">Water Mitigation</a></li><li><a onclick="gp('services')">Sewage Cleanup</a></li><li><a onclick="gp('services')">Flood Damage Restoration</a></li><li><a onclick="gp('services')">Thermal Imaging</a></li><li><a onclick="gp('services')">Structural Drying</a></li><li><a onclick="gp('crimescene')">Crime Scene &amp; Trauma Cleanup</a></li></ul></div>
     <div class="fc"><h5>Company</h5><ul><li><a onclick="gp('about')">About Us</a></li><li><a onclick="gp('home')">Reviews</a></li><li><a onclick="gp('contact')">Contact</a></li><li><a onclick="gp('home')">Service Areas</a></li></ul></div>
     <div class="fc"><h5>Contact</h5><div class="fc-ci"><svg viewBox="0 0 24 24"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/></svg>(647) 493-4887</div><div class="fc-ci"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>emergency@cakewalkcleaning.com</div><div class="fc-ci"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>Toronto &amp; GTA</div></div>
   </div>
-  <div class="ft-btm"><span class="ft-copy">&copy; 2026 Cakewalk Restore Inc. All rights reserved.</span><div class="ft-tags"><span class="ft-tag">Certified</span><span class="ft-tag">Licensed &amp; Insured</span><span class="ft-tag">24/7</span></div></div>
+  <div class="ft-btm"><span class="ft-copy">&copy; 2026 Cakewalk Restore Inc. &mdash; Toronto's fastest emergency restoration response. Water &middot; Fire &middot; Mould &middot; Biohazard.</span><div class="ft-tags"><span class="ft-tag">Certified</span><span class="ft-tag">Licensed &amp; Insured</span><span class="ft-tag">24/7</span></div></div>
 </footer>
 
 <!-- FLOAT -->
@@ -2151,7 +2177,7 @@ function hf(btn) {
   var fields = {};
   wrap.querySelectorAll('.hff-field').forEach(function(f){
     var lbl = (f.querySelector('label')?.textContent || '').trim().toLowerCase();
-    var el = f.querySelector('input, textarea');
+    var el = f.querySelector('input, textarea, select');
     if (el) fields[lbl] = el.value.trim();
   });
   var name = fields['name'] || '';
@@ -2159,15 +2185,15 @@ function hf(btn) {
   var email = fields['email'] || '';
   var address = fields['address'] || '';
   var message = fields['message'] || '';
+  var situation = fields['situation'] || '';
   if (!name || !phone) { alert('Please fill out name and phone.'); return; }
-  var consent = wrap.querySelector('.cwr-consent');
-  if (!consent || !consent.checked) {
-    alert('Please confirm SMS consent to continue.');
-    if (consent) consent.closest('.hff-consent').classList.add('err');
-    return;
-  }
-  var consentText = (consent.closest('.hff-consent').querySelector('span')?.textContent || '').trim();
-  var consentTimestamp = new Date().toISOString();
+  var srcKey = wrap.getAttribute('data-source-page')
+    || (wrap.closest('.page') && wrap.closest('.page').id.replace('p-','')) || 'home';
+  var srcLabel = srcKey === 'crimescene' ? '[Crime Scene]'
+              : srcKey === 'contact'    ? '[Contact Page]'
+              : srcKey === 'services'   ? '[Services]'
+              : '[Home]';
+  var srcTag = srcLabel + (situation ? ' ' + situation : '') + ' ';
   var originalLabel = btn.textContent;
   btn.disabled = true;
   btn.textContent = 'Sending...';
@@ -2177,17 +2203,15 @@ function hf(btn) {
     fullName: name,
     email: email,
     phone: phone,
-    painPoint: (address ? 'Address: ' + address + ' · ' : '') + (message || ''),
-    businessType: '',
+    painPoint: srcTag + (address ? 'Address: ' + address + ' · ' : '') + (message || ''),
+    businessType: situation || srcKey,
     selectedDate: '',
     selectedTime: '',
     utmSource: p.get('utm_source') || '',
     utmMedium: p.get('utm_medium') || '',
     utmCampaign: p.get('utm_campaign') || '',
     referrerUrl: document.referrer || '',
-    smsOptIn: true,
-    smsOptInText: consentText,
-    smsOptInTimestamp: consentTimestamp
+    smsOptIn: false
   };
   fetch(CWR_API_BASE + '/api/bookings', {
     method: 'POST',
